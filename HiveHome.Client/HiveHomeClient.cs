@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HiveHome.Client.Logging;
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -6,6 +7,8 @@ namespace HiveHome.Client
 {
     public class HiveHomeClient : IHiveHomeClient, IDisposable
     {
+        private static readonly ILog Logger = LogProvider.For<HiveHomeClient>();
+
         private HttpClient _client = new HttpClient();
 
         public HiveHomeClient()
