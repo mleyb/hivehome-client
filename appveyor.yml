@@ -5,4 +5,5 @@ platform: Any CPU
 build:
   verbosity: normal
 before_build:
-– appveyor-retry dotnet restore -v Minimal
+- nuget restore
+- dotnet restore
